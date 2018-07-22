@@ -1,4 +1,5 @@
 ﻿using System;
+using Holo.Except.Arguments;
 
 namespace Holo.Except
 {
@@ -6,8 +7,12 @@ namespace Holo.Except
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Two more five equal " + new Foo().Add(2, 5));
+            new Result(
+                new Difference(
+                    new FileElements(new SourcePath(args).Value),
+                    new FileElements(new ExceptPath(args).Value)
+                )
+            ).Display();
         }
     }
 }
