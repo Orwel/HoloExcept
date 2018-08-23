@@ -5,6 +5,33 @@
 
 A console program to retrieve file's elements not present in other file.
 
+## Example
+
+source.txt :
+
+    aaa
+    bbb
+    ccc
+    ddd
+    eee
+
+except.txt :
+
+    aaa
+    ccc
+    ooo
+    zzz
+
+Run :
+
+    dotnet Holo.Except.dll source.txt except.txt > result.txt
+
+result.txt :
+
+    bbb
+    ddd
+    eee
+
 ## Contributing to this project
 
 Anyone and everyone is welcome to contribute. Please take a moment to
